@@ -2,12 +2,12 @@
 import express from "express";
 import { v4 as uuidv4 } from "uuid";
 import path from "path";
-import {dirname} from "path";
-import {fileURLToPath} from "url";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
-const port = process.env.PORT || 3000; // PORT FOR RENDER DEPLOYMENT
+const port = process.env.PORT || 3005; // PORT FOR RENDER DEPLOYMENT
 
 app.set("views", path.join(__dirname, "/views"));
 app.use(express.static(path.join(__dirname, "/public")));
