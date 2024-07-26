@@ -35,7 +35,6 @@ header {
 header a {
     padding: 1rem;
     text-decoration: none;
-
 }
 
 h1 {
@@ -51,7 +50,6 @@ main {
     display: flex;
     justify-content: center;
     max-width: 100%;
-
 }
 
 textarea {
@@ -98,7 +96,6 @@ input:not([value=""]) {
     margin: 1em;
     border-radius: 3em;
     overflow: hidden;
-
 }
 
 .button {
@@ -127,7 +124,6 @@ input:not([value=""]) {
 footer {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     margin: 0;
     background-color: #094C93;
 }
