@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yacht Blog</title>
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+</head>
+<body>
+    <header>
+        <a href="http://localhost:3000/" ><img src="/images/boat.svg" style="display: inline;" ><h1 style="display: inline;" >     YachtBlog</h1></a>
+    </header>
+    <main>
+        <!-- Edit post form -->
+        <form class="post-form" action="/submit-edit/<%=post.id%>" method="POST">
+            <div class="input-div" >
+                <input type="text" name="postTitle" value="<%=post.title%>" maxlength="64" required >
+
+                <textarea name="postBody" required ><%=post.body%></textarea>
+            </div>
+            <button class="svg-btn" >
+                <img type="submit" value="SAVE" src="/images/save.svg" >
+            </button>
+        </form>
+           
+    </main>
+    <footer><a href="https://github.com/RLalor" target="_blank" ><img class="foot-item" src="/images/github.svg" width="32px" height="32px"></a></footer>
+    <script src="/scripts/script.js"></script>
+</body>
+</html>

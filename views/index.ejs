@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yacht Blog</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <header>
+        <a href="http://localhost:3000/" ><img src="/images/boat.svg" style="display: inline;" ><h1 style="display: inline;" >     YachtBlog</h1></a>
+    </header>
+    <main>
+        <!-- Input Form -->
+        <form class="post-form" action="/submit" method="POST">
+            <div class="input-div">
+                <input type="text" name="postTitle" placeholder="Title" maxlength="64" required>
+                <textarea name="postBody" placeholder="I love Yachting bla bla" maxlength="2280" required ></textarea>
+            </div>
+            <button class="svg-btn" >
+                <img type="submit" value="POST" src="/images/add.svg" >
+            </button>
+        </form>
+
+        <!-- Saved Forms -->
+         <% if (posts.length > 0) { %>
+            <% posts.forEach(post => { %>
+                <div class="savedPostDiv">
+               <h3>
+                <%= post.title  %>
+               </h3>
+               <p>
+                <%= post.body %>
+                </p>
+                <form action="/edit/<%= post.id %>" method="POST" style="display: inline;">
+                    <button class="svg-btn" >
+                        <img src="/images/edit.svg" width="25px" height="25px">
+                    </button>
+                </form>
+               <form action="/delete/<%= post.id %>" method="POST" style="display: inline;">
+                    <button class="svg-btn" >
+                        <img src="/images/delete.svg" >
+                    </button>
+               </form>
+            </div>
+         <% }) %>
+         <% } else { %>
+            <div class="savedPostDiv" ><h3>No posts yet...</h3></div>
+            <% } %>
+           
+    </main>
+    <footer><a href="https://github.com/RLalor" target="_blank" ><img class="foot-item" src="/images/github.svg" width="32px" height="32px"></a></footer>
+    <script src="/scripts/script.js"  ></script>
+</body>
+</html>

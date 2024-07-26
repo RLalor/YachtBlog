@@ -1,0 +1,134 @@
+:root {
+    --darkSand: #DFC39DD9;
+    --lightSand: #EAE1C8D9;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+/* Header */
+header {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #094C93;
+}
+
+header a {
+    padding: 1rem;
+}
+
+h1 {
+    color: whitesmoke;
+}
+
+main {
+    margin: 0;
+    flex: 1;
+    flex-wrap: wrap;
+    background-image: url("../images/sea-br.jpeg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+
+}
+
+textarea {
+    resize: none;
+}
+
+input:not([value=""]) {
+    background-color: var(--lightSand);
+}
+
+.post-form {
+    background-color: var(--darkSand);
+    box-shadow: 5px 5px 10px 0 var(--shadow-color);
+    margin: 1em;
+    padding: 2rem;
+    max-width: 50vw;
+    max-height: 50vh;
+    min-height: auto;
+    border-bottom-left-radius: 4em;
+    border-top-right-radius: 4em;
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    outline: 2px solid #a52a2a;
+
+}
+
+.post-form input {
+    background-color: var(--lightSand);
+    border: none;
+    display: block;
+    padding: 1rem;
+}
+
+.post-form textarea {
+    background-color: var(--lightSand);
+    border: none;
+    display: block;
+    padding: 1rem;
+}
+
+.input-div {
+    background-color: var(--lightSand);
+    padding: 2em;
+    margin: 1em;
+    border-radius: 3em;
+
+}
+
+.button {
+    border-radius: 1em;
+}
+
+.svg-btn {
+    background-color: var(--darkSand);
+    border: none;
+}
+
+.savedPostDiv {
+    background-color: var(--darkSand);
+    box-shadow: 5px 5px 10px 0 var(--shadow-color);
+    margin: 1em;
+    padding: 2rem;
+    max-width: 50vw;
+    max-height: 50vh;
+    border-bottom-left-radius: 4em;
+    border-top-right-radius: 4em;
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    outline: 2px solid #a52a2a;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin: 0;
+    background-color: #094C93;
+}
+
+.foot-item {
+    padding: 0.5rem;
+}
